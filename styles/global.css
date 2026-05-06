@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--dark);
+
+}
+
+.service-card,
+.number-item,
+.about-section__media,
+.about-section__content>*,
+.services-section__head>*,
+.services-section__actions a {
+    will-change: transform, opacity;
+}
