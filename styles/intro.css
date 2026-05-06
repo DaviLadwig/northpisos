@@ -178,11 +178,11 @@
     }
 
     .intro__statement h1 span {
-        font-size: clamp(3.5rem, 17vw, 5.4rem);
+        font-size: clamp(3.5rem, 15vw, 5.4rem);
     }
 
     .intro__statement h1 strong {
-        font-size: clamp(4rem, 19vw, 6.2rem);
+        font-size: clamp(4rem, 16vw, 6.2rem);
     }
 
     .intro__line {
