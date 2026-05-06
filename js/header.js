@@ -17,5 +17,41 @@ closeButton.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
 mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-//esconde o header quando o usuário rola para baixo e mostra quando rola para cima
+//pre header
+const headerShell = document.querySelector(".header-shell");
+const siteHeader = document.querySelector(".site-header");
 
+let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+let ticking = false;
+
+function handleHeaderScroll() {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const menuIsOpen = siteHeader.classList.contains("menu-open");
+
+    if (menuIsOpen) {
+        ticking = false;
+        return;
+    }
+
+    if (currentScrollPosition <= 20) {
+        headerShell.classList.remove("header-shell--hidden");
+    } else if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 140) {
+        headerShell.classList.add("header-shell--hidden");
+    } else if (currentScrollPosition < lastScrollPosition) {
+        headerShell.classList.remove("header-shell--hidden");
+    }
+
+    lastScrollPosition = Math.max(currentScrollPosition, 0);
+    ticking = false;
+}
+
+window.addEventListener(
+    "scroll",
+    () => {
+        if (!ticking) {
+            window.requestAnimationFrame(handleHeaderScroll);
+            ticking = true;
+        }
+    },
+    { passive: true }
+);

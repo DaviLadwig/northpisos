@@ -1,0 +1,188 @@
+.floor-types-section {
+    --orange: #f47a1f;
+    --dark: #171717;
+    --dark-soft: #202020;
+    --text-light: #d7d7d7;
+    --muted-light: #b8b8b8;
+    --white: #ffffff;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--white);
+    padding: clamp(64px, 8vw, 104px) clamp(20px, 5vw, 72px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.floor-types-section__wipe {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(135deg, rgba(244, 122, 31, 0.08), transparent 34%),
+        var(--dark);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.floor-types-section__inner {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.floor-types-section__head {
+    max-width: 820px;
+    margin: 0 auto clamp(36px, 5vw, 56px);
+    text-align: center;
+}
+
+.floor-types-section__head span {
+    display: block;
+    color: var(--orange);
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.8rem);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.floor-types-section__head h2 {
+    margin: 8px 0 0;
+    color: var(--white);
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-size: clamp(2.8rem, 7vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.floor-types-section__head h2 strong {
+    color: var(--orange);
+    font-weight: 400;
+}
+
+.floor-types-section__head p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: var(--muted-light);
+    font-size: clamp(1rem, 1.25vw, 1.12rem);
+    line-height: 1.55;
+}
+
+.floor-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(22px, 3vw, 34px);
+}
+
+.floor-type-card {
+    overflow: hidden;
+}
+
+.floor-type-card img {
+    width: 100%;
+    aspect-ratio: 1.52 / 1;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: saturate(0.98) contrast(1.02);
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.floor-type-card:hover img {
+    transform: scale(1.04);
+    filter: saturate(1.08) contrast(1.05) brightness(0.92);
+}
+
+.floor-type-card div {
+    padding-top: 18px;
+    text-align: center;
+}
+
+.floor-type-card h3 {
+    margin: 0;
+    color: var(--orange);
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-size: clamp(1.75rem, 2.8vw, 2.55rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.8px;
+}
+
+.floor-type-card p {
+    max-width: 320px;
+    margin: 10px auto 0;
+    color: var(--muted-light);
+    font-size: 0.98rem;
+    line-height: 1.52;
+}
+
+
+.floor-types-section__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(34px, 5vw, 54px);
+}
+
+.floor-types-section__button {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
+    border: 1px solid rgba(215, 215, 215, 0.42);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.96rem;
+    font-weight: 600;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.floor-types-section__button span {
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.floor-types-section__button:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    transform: translateY(-2px);
+}
+
+.floor-types-section__button:hover span {
+    transform: translateX(4px);
+}
+
+.floor-types-section__actions{
+    justify-content: center;
+    gap: 60px;
+}
+
+@media (max-width: 900px) {
+    .floor-types-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .floor-types-section {
+        padding: 56px 18px;
+    }
+
+    .floor-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floor-types-section__head h2 {
+        font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+}

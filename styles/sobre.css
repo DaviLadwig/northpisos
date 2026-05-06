@@ -15,7 +15,7 @@
 }
 
 .about-section__inner {
-    width: min(1180px, 100%);
+    width: min(1280px, 100%);
     margin: 0 auto;
     display: grid;
     grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);

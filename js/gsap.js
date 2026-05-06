@@ -1,40 +1,38 @@
-gsap.registerPlugin(ScrollTrigger);
 
-function animateItems(selector, options = {}) {
-    gsap.utils.toArray(selector).forEach((item, index) => {
-        gsap.from(item, {
-            scrollTrigger: {
-                trigger: item,
-                start: "top 86%",
-                once: true
-            },
-            y: options.y || 32,
-            x: options.x || 0,
+
+//IMAGEM MAPA
+window.addEventListener("load", () => {
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+        ".coverage-section__map img",
+        {
             opacity: 0,
-            duration: options.duration || 0.7,
-            delay: index * (options.stagger || 0.06),
-            ease: options.ease || "power3.out"
-        });
+            scale: 0.86,
+            y: 36
+        },
+        {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".coverage-section__map",
+                start: "top 80%",
+                once: true
+            }
+        }
+    );
+
+    gsap.to(".coverage-section__map img", {
+        y: -10,
+        duration: 2.8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        delay: 1
     });
-}
-
-animateItems(".service-card", {
-    y: 36,
-    stagger: 0.08
-});
-
-animateItems(".number-item", {
-    y: 28,
-    stagger: 0.1
-});
-
-animateItems(".about-section__specialties li", {
-    x: -18,
-    y: 0,
-    stagger: 0.05
-});
-
-animateItems(".mobile-menu__social a", {
-    y: 16,
-    stagger: 0.06
 });

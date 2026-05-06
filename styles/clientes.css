@@ -1,0 +1,159 @@
+.clients-section {
+    --orange: #f47a1f;
+    --orange-dark: #c95519;
+    --dark: #171717;
+    --text: #242424;
+    --muted: #686868;
+    --line: #e8e8e8;
+    --soft: #f6f6f6;
+    --white: #ffffff;
+
+    background: var(--white);
+    color: var(--text);
+    padding: clamp(64px, 8vw, 104px) 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clients-section__head {
+    width: min(820px, calc(100% - 40px));
+    margin: 0 auto clamp(34px, 5vw, 56px);
+    text-align: center;
+}
+
+.clients-section__head span {
+    display: block;
+    color: var(--orange-dark);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.clients-section__head h2 {
+    margin: 12px 0 0;
+    color: var(--dark);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.clients-section__head p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.35vw, 1.15rem);
+    line-height: 1.6;
+}
+
+.clients-marquee {
+    display: grid;
+    gap: 18px;
+}
+
+.clients-marquee__row {
+    position: relative;
+    overflow: hidden;
+}
+
+.clients-marquee__row::before,
+.clients-marquee__row::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: min(260px, 38vw);
+    height: 100%;
+    pointer-events: none;
+}
+
+.clients-marquee__row::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--white), transparent);
+}
+
+.clients-marquee__row::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--white), transparent);
+}
+
+.clients-marquee__track {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    animation-duration: 32s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.clients-marquee__row:hover .clients-marquee__track {
+    animation-play-state: paused;
+}
+
+.clients-marquee__row--left .clients-marquee__track {
+    animation-name: clientsMoveLeft;
+}
+
+.clients-marquee__row--right .clients-marquee__track {
+    animation-name: clientsMoveRight;
+    transform: translateX(-50%);
+}
+
+.clients-marquee img {
+    width: clamp(170px, 18vw, 210px);
+    height: 100px;
+    padding: 20px 28px;
+    object-fit: contain;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--soft);
+    filter: grayscale(1) opacity(0.68);
+    transition:
+        filter 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.clients-marquee img:hover {
+    filter: grayscale(0) opacity(1);
+    transform: translateY(-2px);
+    border-color: rgba(244, 122, 31, 0.42);
+}
+
+@keyframes clientsMoveLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes clientsMoveRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 620px) {
+    .clients-section {
+        padding: 56px 0;
+    }
+
+    .clients-marquee__track {
+        gap: 12px;
+        animation-duration: 24s;
+    }
+
+    .clients-marquee img {
+        width: 150px;
+        height: 82px;
+        padding: 16px 22px;
+    }
+}

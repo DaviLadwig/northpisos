@@ -6,42 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>North Pisos</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 </head>
 
 <body>
     <main class="intro" aria-label="North Pisos">
         <section class="intro__panel intro__panel--brand">
-            <div class="intro__concrete"></div>
+            <div class="intro__texture"></div>
             <img class="intro__logo" src="images/logo@2x.png" alt="North Pisos" />
         </section>
 
         <section class="intro__panel intro__panel--statement">
-            <div class="statement">
-                <span class="statement__line statement__line--white">Especialidade em Recuperacao de</span>
-                <span class="statement__line statement__line--concrete">Pisos Industriais</span>
+            <div class="intro__texture"></div>
+
+            <div class="intro__statement">
+                <span class="intro__eyebrow">North Pisos</span>
+
+                <h1>
+                    <span>Especialidade em</span>
+                    <span>recuperação de</span>
+                    <strong>pisos industriais</strong>
+                </h1>
+
+                <div class="intro__line"></div>
             </div>
         </section>
     </main>
 
     <!--CABEÇALHO-->
     <header class="site-header">
-        <a class="site-header__brand" href="#home" aria-label="North Pisos">
-            <img src="images/logo@2x.png" alt="North Pisos" />
-        </a>
+        <div class="site-header__top">
+            <div class="site-header__top-inner">
+                <div class="site-header__contacts">
+                    <a href="tel:+5585000000000">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.8 21 3 13.2 3 3.7c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.3 2.2Z" />
+                        </svg>
+                        (85) 00000-0000
+                    </a>
 
-        <nav class="site-header__nav" aria-label="Menu principal">
-            <a href="#home">Home</a>
-            <a href="#servicos">Servicos</a>
-            <a href="#obras">Obras</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#contato">Contato</a>
-        </nav>
+                    <a href="mailto:contato@northpisos.com.br">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 5h18v14H3V5Zm2 2v.6l7 4.4 7-4.4V7H5Zm14 10V10l-7 4.4L5 10v7h14Z" />
+                        </svg>
+                        contato@northpisos.com.br
+                    </a>
+                </div>
 
-        <button class="site-header__toggle" type="button" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <div class="site-header__top-social">
+                    <a href="#" aria-label="Instagram">Endereço: Rua j, Bairro COlinas, 65786-435 - SP - </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-header__main">
+            <a class="site-header__brand" href="#home" aria-label="North Pisos">
+                <img src="images/logo@2x.png" alt="North Pisos" />
+            </a>
+
+            <nav class="site-header__nav" aria-label="Menu principal">
+                <a href="#home">Home</a>
+                <a href="#servicos">Servicos</a>
+                <a href="#obras">Obras</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a class="site-header__quote" href="https://wa.me/5585000000000" target="_blank" rel="noopener">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path
+                        d="M16.04 3.2c-7.04 0-12.76 5.6-12.76 12.5 0 2.2.6 4.34 1.72 6.22L3.2 28.8l7.1-1.78a12.98 12.98 0 0 0 5.74 1.34c7.04 0 12.76-5.6 12.76-12.5S23.08 3.2 16.04 3.2Zm0 22.98c-1.78 0-3.52-.46-5.04-1.32l-.36-.2-4.2 1.06 1.08-4.02-.24-.42a10.25 10.25 0 0 1-1.56-5.42c0-5.7 4.62-10.34 10.32-10.34s10.32 4.64 10.32 10.34-4.62 10.32-10.32 10.32Zm5.66-7.72c-.3-.16-1.82-.88-2.1-.98-.28-.1-.48-.16-.68.16-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.08-.3-.16-1.28-.46-2.44-1.48-.9-.8-1.52-1.78-1.7-2.08-.18-.3-.02-.46.14-.62.14-.14.3-.36.46-.54.16-.18.2-.3.3-.5.1-.2.06-.38-.02-.54-.08-.16-.68-1.62-.94-2.22-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.08-.8.38-.28.3-1.04 1.02-1.04 2.48s1.06 2.88 1.22 3.08c.16.2 2.1 3.18 5.08 4.46.7.3 1.26.48 1.7.62.72.22 1.36.18 1.88.12.58-.08 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.12-.28-.2-.6-.36Z" />
+                </svg>
+                <span>Orçamento</span>
+            </a>
+
+            <button class="site-header__toggle" type="button" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
 
         <div class="mobile-menu__overlay"></div>
 
@@ -72,15 +120,8 @@
                 </div>
             </div>
         </aside>
-
-        <a class="site-header__quote" href="https://wa.me/5585000000000" target="_blank" rel="noopener">
-            <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path
-                    d="M16.04 3.2c-7.04 0-12.76 5.6-12.76 12.5 0 2.2.6 4.34 1.72 6.22L3.2 28.8l7.1-1.78a12.98 12.98 0 0 0 5.74 1.34c7.04 0 12.76-5.6 12.76-12.5S23.08 3.2 16.04 3.2Zm0 22.98c-1.78 0-3.52-.46-5.04-1.32l-.36-.2-4.2 1.06 1.08-4.02-.24-.42a10.25 10.25 0 0 1-1.56-5.42c0-5.7 4.62-10.34 10.32-10.34s10.32 4.64 10.32 10.34-4.62 10.32-10.32 10.32Zm5.66-7.72c-.3-.16-1.82-.88-2.1-.98-.28-.1-.48-.16-.68.16-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.08-.3-.16-1.28-.46-2.44-1.48-.9-.8-1.52-1.78-1.7-2.08-.18-.3-.02-.46.14-.62.14-.14.3-.36.46-.54.16-.18.2-.3.3-.5.1-.2.06-.38-.02-.54-.08-.16-.68-1.62-.94-2.22-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.08-.8.38-.28.3-1.04 1.02-1.04 2.48s1.06 2.88 1.22 3.08c.16.2 2.1 3.18 5.08 4.46.7.3 1.26.48 1.7.62.72.22 1.36.18 1.88.12.58-.08 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.12-.28-.2-.6-.36Z" />
-            </svg>
-            <span>Orçamento</span>
-        </a>
     </header>
+
 
     <!--banners-->
     <section class="hero-banners" aria-label="Destaques North Pisos">
@@ -334,8 +375,7 @@
                 </div>
 
                 <div class="coverage-section__map">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Brazil_Region_Norte.svg"
-                        alt="Mapa da Região Norte do Brasil" />
+                    <img src="images/mapa.png" class="coverage-map-img" alt="Mapa da Região Norte do Brasil" />
                 </div>
             </div>
         </div>
@@ -361,7 +401,345 @@
         </div>
     </section>
 
+    <!--types-->
+    <section class="floor-types-section" id="solucoes">
+        <div class="floor-types-section__wipe"></div>
 
+        <div class="floor-types-section__inner">
+            <div class="floor-types-section__head">
+                <span>O que fazemos</span>
+                <h2>Deixe o <strong>piso</strong> com quem <strong>entende</strong></h2>
+                <p>
+                    Soluções técnicas para pisos industriais, comerciais e áreas de alto desempenho.
+                </p>
+            </div>
+
+            <div class="floor-types-grid">
+                <article class="floor-type-card">
+                    <img src="images/type-img-1.jpeg" alt="Piso monolítico" />
+                    <div>
+                        <h3>Piso Monolítico</h3>
+                        <p>Revestimento contínuo, resistente e fácil de limpar.</p>
+                    </div>
+                </article>
+
+                <article class="floor-type-card">
+                    <img src="images/type-img-2.jpeg" alt="Junta de dilatação" />
+                    <div>
+                        <h3>Junta de Dilatação</h3>
+                        <p>Tratamento para reduzir trincas e aumentar a vida útil.</p>
+                    </div>
+                </article>
+
+                <article class="floor-type-card">
+                    <img src="images/type-img-3.png" alt="Piso industrial polido" />
+                    <div>
+                        <h3>Piso Industrial Polido</h3>
+                        <p>Acabamento resistente, uniforme e de alto padrão.</p>
+                    </div>
+                </article>
+
+                <article class="floor-type-card">
+                    <img src="images/type-img-4.png" alt="Piso galpão" />
+                    <div>
+                        <h3>Piso Galpão</h3>
+                        <p>Base preparada para tráfego intenso e operação logística.</p>
+                    </div>
+                </article>
+
+                <article class="floor-type-card">
+                    <img src="images/type-img5.png" alt="Piso câmara fria" />
+                    <div>
+                        <h3>Piso Câmara Fria</h3>
+                        <p>Solução para ambientes com baixa temperatura e alta exigência.</p>
+                    </div>
+                </article>
+
+                <article class="floor-type-card">
+                    <img src="images/type-img-6.png" alt="Pintura e demarcação" />
+                    <div>
+                        <h3>Pintura e Demarcação</h3>
+                        <p>Sinalização técnica para segurança e organização da área.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="floor-types-section__actions">
+            <a class="floor-types-section__button" href="#contato">
+                Solicitar orçamento
+                <span>→</span>
+            </a>
+
+            <a class="floor-types-section__button" href="#">
+                Ver obras
+                <span>→</span>
+            </a>
+        </div>
+
+    </section>
+
+    <!--CLIENTES-->
+    <section class="clients-section" id="clientes">
+        <div class="clients-section__head">
+            <span>Clientes</span>
+            <h2>Empresas que confiam na North Pisos</h2>
+            <p>
+                Atendemos operações que precisam de pisos resistentes, seguros e preparados para alta demanda.
+            </p>
+        </div>
+
+        <div class="clients-marquee" aria-label="Logos de clientes">
+            <div class="clients-marquee__row clients-marquee__row--left">
+                <div class="clients-marquee__track">
+                    <img src="images/cliente-1.png" alt="Cliente 1" />
+                    <img src="images/cliente-2.png" alt="Cliente 2" />
+                    <img src="images/cliente-3.jfif" alt="Cliente 3" />
+                    <img src="images/cliente-4.jfif" alt="Cliente 4" />
+                    <img src="images/cliente-5.jfif" alt="Cliente 5" />
+                    <img src="images/cliente-6.jfif" alt="Cliente 6" />
+
+                    <img src="images/cliente-1.png" alt="" aria-hidden="true" />
+                    <img src="images/cliente-2.png" alt="" aria-hidden="true" />
+                    <img src="images/cliente-3.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-4.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-5.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-6.jfif" alt="" aria-hidden="true" />
+                </div>
+            </div>
+
+            <div class="clients-marquee__row clients-marquee__row--right">
+                <div class="clients-marquee__track">
+                    <img src="images/cliente-7.jfif" alt="Cliente 7" />
+                    <img src="images/cliente-8.jfif" alt="Cliente 8" />
+                    <img src="images/cliente-9.jfif" alt="Cliente 9" />
+                    <img src="images/cliente-10.jfif" alt="Cliente 10" />
+                    <img src="images/cliente-11.jfif" alt="Cliente 11" />
+
+                    <img src="images/cliente-7.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-8.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-9.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-10.jfif" alt="" aria-hidden="true" />
+                    <img src="images/cliente-11.jfif" alt="" aria-hidden="true" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Perguntas freuqentes-->
+    <section class="faq-section" id="faq">
+        <div class="faq-section__inner">
+            <div class="faq-section__media">
+                <img src="images/faq-img.png" alt="Especialista da North Pisos" />
+            </div>
+
+            <div class="faq-section__content">
+                <span>Perguntas frequentes</span>
+                <h2>Dúvidas comuns antes de recuperar o piso industrial</h2>
+
+                <div class="faq-list">
+                    <article class="faq-item is-open">
+                        <button type="button">
+                            Quanto tempo leva para recuperar um piso industrial?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>
+                                O prazo depende da área, do estado do piso e do tipo de solução aplicada. Após a
+                                avaliação técnica, definimos um cronograma para reduzir ao máximo a parada da operação.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button type="button">
+                            É possível executar o serviço com a empresa funcionando?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>
+                                Sim. Em muitos casos, conseguimos trabalhar por etapas, isolando áreas específicas e
+                                mantendo parte da operação ativa durante o serviço.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button type="button">
+                            Vocês atendem galpões, indústrias e centros logísticos?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>
+                                Sim. Atuamos em ambientes industriais, comerciais, logísticos, alimentícios,
+                                farmacêuticos e áreas de alto tráfego.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button type="button">
+                            Qual solução é melhor para o meu piso?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>
+                                A escolha depende do uso da área, tráfego, umidade, resistência química, acabamento
+                                desejado e condição atual do piso. Por isso recomendamos uma avaliação técnica.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <button type="button">
+                            O orçamento é feito após visita técnica?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>
+                                Preferencialmente sim. A visita permite entender a necessidade real da obra e indicar
+                                uma solução mais segura, durável e compatível com a operação.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section contato-->
+    <section class="contact-section" id="contato">
+        <div class="contact-section__inner">
+            <div class="contact-section__content">
+                <span>Contato direto</span>
+                <h2>Fale com a North Pisos e solicite uma avaliação técnica</h2>
+                <p>
+                    Conte rapidamente o tipo de área, metragem aproximada e a necessidade do piso. Nossa equipe
+                    retorna com orientação comercial e próximos passos.
+                </p>
+
+                <div class="contact-section__actions">
+                    <a class="contact-section__whatsapp" href="https://wa.me/5585000000000" target="_blank"
+                        rel="noopener">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                            <path
+                                d="M16.04 3.2c-7.04 0-12.76 5.6-12.76 12.5 0 2.2.6 4.34 1.72 6.22L3.2 28.8l7.1-1.78a12.98 12.98 0 0 0 5.74 1.34c7.04 0 12.76-5.6 12.76-12.5S23.08 3.2 16.04 3.2Zm0 22.98c-1.78 0-3.52-.46-5.04-1.32l-.36-.2-4.2 1.06 1.08-4.02-.24-.42a10.25 10.25 0 0 1-1.56-5.42c0-5.7 4.62-10.34 10.32-10.34s10.32 4.64 10.32 10.34-4.62 10.32-10.32 10.32Zm5.66-7.72c-.3-.16-1.82-.88-2.1-.98-.28-.1-.48-.16-.68.16-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.08-.3-.16-1.28-.46-2.44-1.48-.9-.8-1.52-1.78-1.7-2.08-.18-.3-.02-.46.14-.62.14-.14.3-.36.46-.54.16-.18.2-.3.3-.5.1-.2.06-.38-.02-.54-.08-.16-.68-1.62-.94-2.22-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.08-.8.38-.28.3-1.04 1.02-1.04 2.48s1.06 2.88 1.22 3.08c.16.2 2.1 3.18 5.08 4.46.7.3 1.26.48 1.7.62.72.22 1.36.18 1.88.12.58-.08 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.12-.28-.2-.6-.36Z" />
+                        </svg>
+                        Chamar no WhatsApp
+                    </a>
+
+                    <a class="contact-section__phone" href="tel:+5585000000000">
+                        Ligar agora
+                    </a>
+                </div>
+
+                <div class="contact-section__info">
+                    <article>
+                        <strong>Atendimento</strong>
+                        <p>Segunda a sexta, horário comercial</p>
+                    </article>
+
+                    <article>
+                        <strong>Região</strong>
+                        <p>Atendemos todo o Norte do Brasil</p>
+                    </article>
+
+                    <article>
+                        <strong>E-mail</strong>
+                        <p>contato@northpisos.com.br</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="contact-section__media">
+                <img src="images/contato-img.png" alt="Atendimento North Pisos" />
+
+                <div class="contact-section__badge">
+                    <strong>Resposta rápida</strong>
+                    <span>Orçamento direto com a equipe comercial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <footer class="site-footer">
+        <div class="site-footer__main">
+            <div class="site-footer__brand">
+                <img src="images/logo@2x.png" alt="North Pisos" />
+                <div class="site-footer__address">
+                    <strong>Endereço</strong>
+                    <address>
+                        Rua Exemplo, 000 - Distrito Industrial<br />
+                        Fortaleza - CE
+                    </address>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua%20Exemplo%20000%20Distrito%20Industrial%20Fortaleza%20CE"
+                        target="_blank" rel="noopener">
+                        Ver no Google Maps
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="site-footer__column">
+                <h2>Navegue</h2>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#obras">Obras</a>
+                    <a href="#clientes">Clientes</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+
+            <div class="site-footer__column">
+                <h2>Termos de Uso</h2>
+                <nav>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </nav>
+            </div>
+
+            <div class="site-footer__contact">
+                <h2>Entre em Contato</h2>
+                <p>Fale com a North Pisos pelos canais de atendimento:</p>
+
+                <div class="site-footer__contact-list">
+                    <a href="mailto:contato@northpisos.com.br">contato@northpisos.com.br</a>
+                    <a href="tel:+5591984449968">(91) 98444-9968</a>
+                </div>
+
+                <div class="site-footer__social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v5h4v-5h3.4l.6-4h-4V9c0-.7.3-1 1-1Z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M7 2h10c3 0 5 2 5 5v10c0 3-2 5-5 5H7c-3 0-5-2-5-5V7c0-3 2-5 5-5Zm0 2c-1.9 0-3 1.1-3 3v10c0 1.9 1.1 3 3 3h10c1.9 0 3-1.1 3-3V7c0-1.9-1.1-3-3-3H7Zm5 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5.3-2.8a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="site-footer__bottom">
+            <p>© Copyrights 2026 | North Pisos - Pisos Industriais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 
 
@@ -369,9 +747,11 @@
     <script src="js/banners.js"></script>
     <script src="js/numeros.js"></script>
     <script src="js/gsap.js"></script>
+    <script src="js/types.js"></script>
+    <script src="js/duvidas.js"></script>
+    <script src="js/header-effect.js"></script>
     <!--GSAP-->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 
 
 </body>
